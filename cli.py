@@ -21,7 +21,7 @@ def resource_path(relative_path):
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS2
     except Exception:
-        base_path = os.path.abspath("auto_subtitle")
+        base_path = os.path.abspath('.')
     return os.path.join(base_path, relative_path)
 
 
@@ -126,7 +126,7 @@ def add_progress():
         # print(my_variable_proxy.content, my_variable_proxy.seek)
 
         progress = ttk.Progressbar(root, mode='determinate', maximum=my_variable_proxy.content, variable=progress_var, length=300)
-        progress.pack(pady=50)
+        progress.pack(pady=10)
 
         def update():
             # print(content_frames, seek)
@@ -162,9 +162,12 @@ def get_subtitles(audio_paths: list, output_srt: bool, output_dir: str, transcri
     subtitles_path = {}
 
     root.attributes('-disabled', True)
+    total_files = len(video_path)
+    count = 1
     for path, audio_path in audio_paths.items():
+        status_label.configure(text=f'file {count} of {total_files}')
+        count += 1
         add_progress()
-        print(path, audio_path)
         srt_path = output_dir if output_srt else tempfile.gettempdir()
         srt_path = os.path.join(srt_path, f"{filename(path)}.srt")
 
@@ -182,10 +185,10 @@ def get_subtitles(audio_paths: list, output_srt: bool, output_dir: str, transcri
         subtitles_path[path] = srt_path
         progress.pack_forget()
         progress.update_idletasks()
-        print('Should be destroyed')
         my_variable_proxy.content = None
         my_variable_proxy.seek = None
     # When all file are processed
+    status_label.configure(text='')
     root.attributes('-disabled', False)
     progress.pack_forget()
     messagebox.showinfo("Done", "Done!")
@@ -206,7 +209,7 @@ root = tk.Tk()
 root.geometry('500x500')
 root.title("Sub generator")
 
-theme_path = resource_path('Azure/azure.tcl')
+theme_path = resource_path('Azure\\azure.tcl')
 root.tk.call('source', theme_path)
 root.tk.call("set_theme", "light")
 
@@ -226,7 +229,6 @@ rb3 = ttk.Radiobutton(rb_frm, text='Medium', value='medium.en', variable=model_v
 btn_convert = ttk.Button(root, text='Convert', command=start_task)
 
 status_label = ttk.Label(root, text='')
-status_label.pack()
 
 progress = ttk.Progressbar(root, length=200, mode='determinate')
 
@@ -239,6 +241,9 @@ rb2.pack(anchor='w')
 rb3.pack(anchor='w')
 rb_frm.pack(pady=50)
 
+
 btn_convert.pack()
+status_label.pack(pady=30)
+
 
 root.mainloop()

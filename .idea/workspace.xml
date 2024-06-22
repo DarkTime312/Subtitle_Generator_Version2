@@ -5,157 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1f275c9-d00f-4a13-bdb9-2b973ca083f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Subtitle-Generator-v2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/Dark screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/Light screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/azure.tcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark.tcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/box-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/box-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/box-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/box-invalid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/button-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-tri-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-tri-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/check-tri-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/circle-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/circle-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/circle-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/combo-button-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/combo-button-focus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/combo-button-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/down-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/hor-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/hor-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/hor-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/notebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/off-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/on-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/on-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/outline-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/outline-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-tri-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-tri-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/radio-tri-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/rect-accent-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/rect-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/rect-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/rect-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/scale-hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/scale-vert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/separator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/size.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tab-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tab-disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tab-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-hor-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-hor-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-hor-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-vert-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-vert-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tick-vert-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tree-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/tree-pressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/up-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/vert-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/vert-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/dark/vert-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light.tcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/box-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/box-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/box-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/box-invalid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/button-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-tri-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-tri-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/check-tri-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/circle-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/circle-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/circle-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/combo-button-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/combo-button-focus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/combo-button-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/down-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/hor-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/hor-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/hor-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/notebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/off-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/off-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/on-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/on-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/on-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/outline-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/outline-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-tri-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-tri-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/radio-tri-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/rect-accent-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/rect-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/rect-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/rect-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/scale-hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/scale-vert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/separator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/size.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tab-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tab-disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tab-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-hor-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-hor-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-hor-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-vert-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-vert-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tick-vert-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tree-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/tree-pressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/up-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/vert-accent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/vert-basic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/Azure/theme/light/vert-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/cli.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/test_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_subtitle/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,30 +19,57 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2iDrKKq9mhjiZM9rZtVEI2RZDuQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.cli.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Mohammad/Documents/Mnitors/My_script/Subtitle-Generator-v2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.cli (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.cli.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_file.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohammad/Documents/Mnitors/My_script/Subtitle-Generator-v2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohammad\Documents\Mnitors\My_script\Subtitle-Generator-v2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohammad\Documents\Mnitors\My_script\Subtitle-Generator-v2" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.cli (1)">
+    <configuration name="cli (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Subtitle-Generator-v2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cli.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="cli" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Subtitle-Generator-v2" />
       <option name="ENV_FILES" value="" />
@@ -214,8 +92,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Subtitle-Generator-v2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cli (1)" />
+        <item itemvalue="Python.test_file" />
         <item itemvalue="Python.cli" />
       </list>
     </recent_temporary>
@@ -236,6 +138,19 @@
       <option name="presentableId" value="Default" />
       <updated>1719035924144</updated>
     </task>
+    <task id="LOCAL-00001" summary="v 1.0">
+      <option name="closed" value="true" />
+      <created>1719036565169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719036565169</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 1.0" />
   </component>
 </project>
