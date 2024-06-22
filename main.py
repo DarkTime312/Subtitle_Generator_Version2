@@ -1,9 +1,8 @@
 import ffmpeg
 import whisper
-import argparse
 import warnings
 import tempfile
-from utils import filename, str2bool, write_srt
+from utils import filename, write_srt
 import tkinter as tk
 from tkinter import ttk
 import threading
@@ -25,77 +24,62 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
+def init_dict():
+    global our_dict
+    our_dict = {'model': 'tiny.en',
+                'output_dir': None,
+                'output_srt': True,
+                'srt_only': True,
+                'language': 'en',
+                'video': None
+                }
+
+
 def select_file():
     global video_path
     video_path = filedialog.askopenfilenames(filetypes=(('MP4 Files', '*.mp4'), ('All files', '*.*')))
-    file_path_var.set(video_path[0] if len(video_path) == 1 else 'Multiple files!')
+    file_path_var.set(f'{len(video_path)} files selected')
 
 
 def start_task():
     # Start the long-running task in a separate thread
-    start = threading.Thread(target=convert)
-    start.start()
+    if video_path:
+        start = threading.Thread(target=convert)
+        start.start()
 
 
 def convert():
-    args['model'] = model_var.get()
-    args['video'] = [file for file in video_path]
+    init_dict()
+    our_dict['model'] = model_var.get()
+    our_dict['video'] = [file for file in video_path]
     file = pathlib.Path(video_path[0])
-    args['output_dir'] = str(file.parent)
+    our_dict['output_dir'] = str(file.parent)
     main()
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("video", nargs="+", type=str,
-                        help="paths to video files to transcribe")
-    parser.add_argument("--model", default="tiny.en",
-                        choices=whisper.available_models(), help="name of the Whisper model to use")
-    parser.add_argument("--output_dir", "-o", type=str,
-                        default=".", help="directory to save the outputs")
-    parser.add_argument("--output_srt", type=str2bool, default=False,
-                        help="whether to output the .srt file along with the video files")
-    parser.add_argument("--srt_only", type=str2bool, default=False,
-                        help="only generate the .srt file and not create overlayed video")
-    parser.add_argument("--verbose", type=str2bool, default=False,
-                        help="whether to print out the progress and debug messages")
-
-    parser.add_argument("--task", type=str, default="transcribe", choices=[
-        "transcribe", "translate"],
-                        help="whether to perform X->X speech recognition ('transcribe') or X->English translation ('translate')")
-    parser.add_argument("--language", type=str, default="auto",
-                        choices=["auto", "af", "am", "ar", "as", "az", "ba", "be", "bg", "bn", "bo", "br", "bs", "ca",
-                                 "cs", "cy", "da", "de", "el", "en", "es", "et", "eu", "fa", "fi", "fo", "fr", "gl",
-                                 "gu", "ha", "haw", "he", "hi", "hr", "ht", "hu", "hy", "id", "is", "it", "ja", "jw",
-                                 "ka", "kk", "km", "kn", "ko", "la", "lb", "ln", "lo", "lt", "lv", "mg", "mi", "mk",
-                                 "ml", "mn", "mr", "ms", "mt", "my", "ne", "nl", "nn", "no", "oc", "pa", "pl", "ps",
-                                 "pt", "ro", "ru", "sa", "sd", "si", "sk", "sl", "sn", "so", "sq", "sr", "su", "sv",
-                                 "sw", "ta", "te", "tg", "th", "tk", "tl", "tr", "tt", "uk", "ur", "uz", "vi", "yi",
-                                 "yo", "zh"],
-                        help="What is the origin language of the video? If unset, it is detected automatically.")
-
-    model_name: str = args.pop("model")
-    output_dir: str = args.pop("output_dir")
-    output_srt: bool = args.pop("output_srt")
-    srt_only: bool = args.pop("srt_only")
-    language: str = args.pop("language")
+    model_name: str = our_dict.pop("model")
+    print(model_name)
+    output_dir: str = our_dict.pop("output_dir")
+    output_srt: bool = our_dict.pop("output_srt")
+    srt_only: bool = our_dict.pop("srt_only")
+    language: str = our_dict.pop("language")
 
     os.makedirs(output_dir, exist_ok=True)
 
     if model_name.endswith(".en"):
         warnings.warn(
             f"{model_name} is an English-only model, forcing English detection.")
-        args["language"] = "en"
+        our_dict["language"] = "en"
     # if translate task used and language argument is set, then use it
     elif language != "auto":
-        args["language"] = language
+        our_dict["language"] = language
 
     model = whisper.load_model(model_name)
-    audios = get_audio(args.pop("video"))
+    audios = get_audio(our_dict.pop("video"))
     subtitles = get_subtitles(
         audios, output_srt or srt_only, output_dir,
-        lambda audio_path: model.transcribe(audio_path, verbose=False, **args)
+        lambda audio_path: model.transcribe(audio_path, verbose=False, **our_dict)
     )
 
     if srt_only:
@@ -123,14 +107,12 @@ def add_progress():
         root.after(5, add_progress)
     else:
         progress_var = tk.IntVar()
-        # print(my_variable_proxy.content, my_variable_proxy.seek)
 
-        progress = ttk.Progressbar(root, mode='determinate', maximum=my_variable_proxy.content, variable=progress_var, length=300)
+        progress = ttk.Progressbar(root, mode='determinate', maximum=my_variable_proxy.content, variable=progress_var,
+                                   length=300)
         progress.pack(pady=10)
 
         def update():
-            # print(content_frames, seek)
-            # print(my_variable_proxy.content, my_variable_proxy.seek)
             if my_variable_proxy.seek is not None:
                 progress_var.set(my_variable_proxy.seek)
             if progress_var.get() != my_variable_proxy.content:
@@ -159,6 +141,7 @@ def get_audio(paths):
 
 
 def get_subtitles(audio_paths: list, output_srt: bool, output_dir: str, transcribe: callable):
+    global video_path
     subtitles_path = {}
 
     root.attributes('-disabled', True)
@@ -191,19 +174,12 @@ def get_subtitles(audio_paths: list, output_srt: bool, output_dir: str, transcri
     status_label.configure(text='')
     root.attributes('-disabled', False)
     progress.pack_forget()
+    video_path = None
     messagebox.showinfo("Done", "Done!")
 
     return subtitles_path
 
 
-args = {'model': 'tiny.en',
-        'output_dir': r"G:\Udemy\Python\Doing now\Tkinter\Udemy - Learn Python by creating 10 apps with tkinter 2023-10\0 - Done\1. Introduction\New folder",
-        'output_srt': True,
-        'srt_only': True,
-        'language': 'en',
-        'video': [
-            r'G:\Udemy\Python\Doing now\Tkinter\Udemy - Learn Python by creating 10 apps with tkinter 2023-10\0 - Done\1. Introduction\New folder\1. Trailer.mp4']
-        }
 
 root = tk.Tk()
 root.geometry('500x500')
@@ -213,6 +189,7 @@ theme_path = resource_path('Azure\\azure.tcl')
 root.tk.call('source', theme_path)
 root.tk.call("set_theme", "light")
 
+video_path = None
 select_path_btn = ttk.Button(root, text='Select Files', command=select_file)
 file_path_var = tk.StringVar()
 lbl_path = ttk.Label(root, textvariable=file_path_var)
@@ -241,9 +218,7 @@ rb2.pack(anchor='w')
 rb3.pack(anchor='w')
 rb_frm.pack(pady=50)
 
-
 btn_convert.pack()
 status_label.pack(pady=30)
-
 
 root.mainloop()
